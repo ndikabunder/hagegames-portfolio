@@ -27,7 +27,7 @@ const contactRoutes = [
   },
   {
     title: "General",
-    body: "For business questions, partnerships, career conversations, and anything else that does not fit neatly into a category.",
+    body: "For business questions, partnerships, and anything else that does not fit neatly into a category.",
     href: "mailto:hello@hagegames.com",
     label: "Business",
     icon: <BriefcaseBusiness size={30} />,

@@ -10,7 +10,7 @@ export function Hero() {
         <div className="absolute inset-0 scale-[1.18]">
           <iframe
             src="https://www.youtube.com/embed/YHhwdyWkwTQ?autoplay=1&mute=1&loop=1&playlist=YHhwdyWkwTQ&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1"
-            className="absolute left-1/2 top-1/2 h-[120vh] min-h-[120vh] w-[120vw] min-w-[120vw] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute left-1/2 top-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none aspect-video sm:h-[120vh] sm:w-[120vw]"
             allow="autoplay; encrypted-media"
             allowFullScreen
             title="HageGames background reel"

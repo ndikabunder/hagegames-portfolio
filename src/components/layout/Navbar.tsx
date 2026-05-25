@@ -10,12 +10,11 @@ import { cn } from "@/lib/utils";
 
 const mainLinks = [
   { href: "/games", label: "Games" },
-  { href: "/about", label: "Explore" },
-  { href: "/contact", label: "Developer" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const utilityLinks = [
-  { href: "/contact", label: "Join us" },
   { href: "/contact", label: "Press" },
   { href: "/contact", label: "Support" },
 ];

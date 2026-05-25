@@ -27,28 +27,29 @@ export function CTA() {
               <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
               <div className="relative">
                 <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent">
-                  Careers at HageGames
+                  Partner with us
                 </span>
                 <h2 className="mt-5 text-3xl font-extrabold uppercase leading-[0.98] tracking-tight text-balance sm:text-5xl md:text-6xl">
-                  Become a HageMaker
+                  Let&apos;s build something epic
                 </h2>
                 <div className="mt-7 max-w-2xl space-y-4 text-muted leading-relaxed">
                   <p>
-                    Joining HageGames means working with people who care deeply
-                    about games, craft, and the teams that make them possible.
+                    Have a game idea that needs a dedicated team? We partner with
+                    publishers, studios, and creators to bring ambitious projects
+                    to life.
                   </p>
                   <p>
-                    You&apos;ll sharpen your skills, contribute to distinct worlds,
-                    and help shape projects that players can remember.
+                    From concept to launch, we bring craft, momentum, and a
+                    shared passion for games that players remember.
                   </p>
-                  <p>Sound like fun? Come build with us.</p>
+                  <p>Let&apos;s talk about your next project.</p>
                 </div>
 
                 <Link
                   href="/contact"
                   className="mt-9 inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-background transition-colors hover:bg-accent-hover"
                 >
-                  View our open roles <ArrowUpRight size={16} />
+                  Start a conversation <ArrowUpRight size={16} />
                 </Link>
               </div>
             </div>

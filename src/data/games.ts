@@ -140,7 +140,7 @@ export const services: Service[] = [
 export const stats: Stat[] = [
   { label: "Years of Experience", value: 8, suffix: "+" },
   { label: "Games Developed", value: 12, suffix: "+" },
-  { label: "Team Members", value: 35, suffix: "" },
+  { label: "Team Members", value: 5, suffix: "" },
   { label: "Awards Won", value: 6, suffix: "" },
 ];
 

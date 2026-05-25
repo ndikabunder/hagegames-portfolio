@@ -217,18 +217,18 @@ export default function AboutPage() {
                 <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
                 <Users className="relative mb-8 text-accent" size={38} />
                 <h2 className="relative text-3xl font-extrabold uppercase leading-[0.98] tracking-tight sm:text-4xl">
-                  Why work with us?
+                  Let&apos;s collaborate
                 </h2>
                 <p className="relative mt-6 text-muted leading-relaxed">
-                  Joining HageGames means working alongside people who care
-                  about games, respect production realities, and enjoy solving
-                  hard creative problems together.
+                  We&apos;re always open to creative collaborations — whether
+                  you&apos;re a fellow studio, publisher, or creator looking to
+                  build something memorable together.
                 </p>
                 <Link
                   href="/contact"
                   className="relative mt-8 inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-bold text-background transition-colors hover:bg-accent-hover"
                 >
-                  View roles <ArrowUpRight size={16} />
+                  Get in touch <ArrowUpRight size={16} />
                 </Link>
               </article>
             </AnimatedSection>

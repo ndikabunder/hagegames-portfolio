@@ -4,22 +4,19 @@ import {
   AtSign,
   Camera,
   Gamepad2,
-  Globe,
+  Mail,
   MessageCircle,
   SquarePlay,
-  UsersRound,
   X,
 } from "lucide-react";
 
 const socialLinks = [
+  { label: "Twitter", href: "https://x.com/hagegames", icon: <X size={24} /> },
+  { label: "Instagram", href: "https://instagram.com/hagegames", icon: <Camera size={24} /> },
   { label: "Discord", href: "#", icon: <MessageCircle size={24} /> },
-  { label: "Community", href: "#", icon: <UsersRound size={24} /> },
-  { label: "Website", href: "#", icon: <Globe size={24} /> },
-  { label: "Instagram", href: "#", icon: <Camera size={24} /> },
-  { label: "YouTube", href: "#", icon: <SquarePlay size={25} /> },
-  { label: "X", href: "#", icon: <X size={25} /> },
-  { label: "Email", href: "mailto:hello@hagegames.com", icon: <AtSign size={24} /> },
-  { label: "Games", href: "/games", icon: <Gamepad2 size={24} /> },
+  { label: "YouTube", href: "https://youtube.com/@hagegames", icon: <SquarePlay size={25} /> },
+  { label: "Threads", href: "https://threads.net/@hagegames", icon: <AtSign size={24} /> },
+  { label: "Email", href: "mailto:hello@hagegames.com", icon: <Mail size={24} /> },
 ];
 
 const footerLinks = [
