@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GameGrid } from "@/components/games/GameGrid";
 
@@ -15,7 +16,9 @@ export default function GamesPage() {
           title="Our Games"
           subtitle="Explore our portfolio of games across multiple platforms and genres"
         />
-        <GameGrid />
+        <Suspense>
+          <GameGrid />
+        </Suspense>
       </div>
     </section>
   );

@@ -8,9 +8,14 @@ export function Hero() {
     <section className="relative min-h-[100svh] overflow-hidden bg-background pt-24 sm:pt-28">
       <div className="absolute inset-0">
         <div className="absolute inset-0 scale-[1.18]">
+          {/* Fallback poster for mobile (iOS blocks autoplay) */}
+          <div
+            className="absolute inset-0 bg-cover bg-center sm:hidden"
+            style={{ backgroundImage: `url(https://cdn.akamai.steamstatic.com/steam/apps/1029780/capsule_616x353.jpg)` }}
+          />
           <iframe
             src="https://www.youtube.com/embed/YHhwdyWkwTQ?autoplay=1&mute=1&loop=1&playlist=YHhwdyWkwTQ&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1"
-            className="absolute left-1/2 top-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none aspect-video sm:h-[120vh] sm:w-[120vw]"
+            className="absolute left-1/2 top-1/2 hidden min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none sm:block sm:h-[120vh] sm:w-[120vw]"
             allow="autoplay; encrypted-media"
             allowFullScreen
             title="HageGames background reel"

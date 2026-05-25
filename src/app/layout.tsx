@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 const outfit = Outfit({
-  variable: "--font-syne",
+  variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   },
   description:
     "HageGames is a game studio crafting immersive gaming experiences across multiple platforms.",
+  themeColor: "#050505",
   metadataBase: new URL("https://hagegames.com"),
   openGraph: {
     title: "HageGames — Game Studio",
@@ -46,8 +47,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${dmSans.variable} antialiased`}>
       <body className="grain min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden" suppressHydrationWarning>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-background focus:text-sm focus:font-bold">
+          Skip to content
+        </a>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

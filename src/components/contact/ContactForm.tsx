@@ -1,14 +1,19 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { CheckCircle, Send } from "lucide-react";
+import { CheckCircle, Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    setLoading(true);
+    // Simulate network request
+    await new Promise((r) => setTimeout(r, 1200));
+    setLoading(false);
     setSubmitted(true);
   }
 
@@ -105,7 +110,8 @@ export function ContactForm() {
       </div>
 
       <Button type="submit" className="w-full sm:w-auto">
-        <Send size={14} className="mr-2" /> Send message
+        {loading ? <Loader2 size={14} className="mr-2 animate-spin" /> : <Send size={14} className="mr-2" />}
+        {loading ? "Sending…" : "Send message"}
       </Button>
     </form>
   );
