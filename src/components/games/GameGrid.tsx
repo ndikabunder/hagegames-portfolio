@@ -1,0 +1,50 @@
+"use client";
+
+import { useState } from "react";
+import { games } from "@/data/games";
+import { GameCard } from "@/components/games/GameCard";
+import { cn } from "@/lib/utils";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+
+type Filter = "all" | "released" | "coming_soon";
+
+export function GameGrid() {
+  const [filter, setFilter] = useState<Filter>("all");
+
+  const filtered = filter === "all" ? games : games.filter((g) => g.status === filter);
+
+  const filters: { label: string; value: Filter }[] = [
+    { label: "All Games", value: "all" },
+    { label: "Released", value: "released" },
+    { label: "Coming Soon", value: "coming_soon" },
+  ];
+
+  return (
+    <div>
+      <div className="flex flex-wrap gap-3 mb-10">
+        {filters.map((f) => (
+          <button
+            key={f.value}
+            onClick={() => setFilter(f.value)}
+            className={cn(
+              "px-4 py-2.5 rounded-lg text-xs uppercase tracking-[0.12em] font-medium transition-[background-color,border-color,color] duration-300 sm:px-5 sm:tracking-[0.15em]",
+              filter === f.value
+                ? "bg-accent text-background"
+                : "border border-border/50 text-muted hover:text-foreground hover:border-accent/30"
+            )}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filtered.map((game, i) => (
+          <AnimatedSection key={game.slug} delay={i * 0.08}>
+            <GameCard game={game} />
+          </AnimatedSection>
+        ))}
+      </div>
+    </div>
+  );
+}
