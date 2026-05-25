@@ -55,8 +55,8 @@ export function Footer() {
 
       <section className="bg-surface px-5 py-8 sm:px-6">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+          <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
               <Link href="/" className="inline-block">
                 <Image src="https://hagegames.com/logo.png" alt="HageGames" width={140} height={40} className="h-7 w-auto" />
               </Link>
