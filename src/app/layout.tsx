@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${dmSans.variable} antialiased`}>
-      <body className="grain min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
+      <body className="grain min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
